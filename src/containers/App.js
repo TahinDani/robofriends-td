@@ -36,7 +36,6 @@ class App extends Component {
         });                                 //
     }
 
-    
     render() {
         const { robots } = this.state;
         const { searchField, onSearchChange } = this.props;
@@ -59,4 +58,8 @@ class App extends Component {
     }
 }
 
+// We have created an action that gets dispatched into the reducer
+// that - based on that action - takes the state and changes it in the store.
+// Because the store gets updated React components that are interested
+// are gonna listen to those changes and make a view change.
 export default connect(mapStateToProps, mapDispatchToProps)(App);
